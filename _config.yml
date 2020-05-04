@@ -97,7 +97,7 @@ analytics:
 # Site Author
 author:
   name             : "Kyungsun Choi"
-  avatar           : "/assets/images/profile_mini.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/images/profile_mini.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Frontend Developer, Designer"
   location         : "hoehyeon, seoul, South Korea"
   email            : "kschoi0308@gmail.com"

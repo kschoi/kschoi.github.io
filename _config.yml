@@ -282,8 +282,3 @@ defaults:
       comments: true
       share: true
       related: true
-
-# Header      
-# header:
-#   image: "photo-1439066615861-d1af74d74000.jpg"
-#   caption: "Photo credit: [**Unsplash**](https://unsplash.com)"

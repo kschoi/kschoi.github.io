@@ -1,2 +1,2 @@
-# kschoi.github.io
-Kyungsun Choi's blog
+# Kyungsun Choi's blog
+

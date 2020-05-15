@@ -41,11 +41,11 @@ export default {
 
 subcomponents 객체의 키값이 탭의 타이틀과 일치됩니다.
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/173db59e-8726-40e4-a986-68f48aed9c99/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/173db59e-8726-40e4-a986-68f48aed9c99/Untitled.png)
+![storybook-docs-1](/assets/images/posts/storybook-docs-1.png)
 
 ### DocsPage 슬롯
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/730fe349-2249-4fa8-94d5-090588de7601/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/730fe349-2249-4fa8-94d5-090588de7601/Untitled.png)
+![storybook-docs-2](/assets/images/posts/storybook-docs-2.png)
 
 - **Title**
 
@@ -151,4 +151,4 @@ markdown documentation.
 </Preview>
 ```
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e3ebb595-21bf-4e50-bafb-0c89281434b7/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e3ebb595-21bf-4e50-bafb-0c89281434b7/Untitled.png)
+![storybook-docs-3](/assets/images/posts/storybook-docs-3.png)

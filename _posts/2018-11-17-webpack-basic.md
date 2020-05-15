@@ -3,6 +3,8 @@ title: "webpack 기본 이해하기"
 date: 2020-05-04 15:40:00 -0400
 categories: webpack
 ---
+인프런의 쉽게 배우는 Webpack 수강 후 내용을 정리했습니다. 
+
 # webpack 소개
 
 - 서로 연관 관계가 있는 웹 자원들을 js, css, img와 같은 스태틱한 자원으로 변환해주는 모듈 번들러

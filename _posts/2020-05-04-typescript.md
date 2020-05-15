@@ -1,8 +1,10 @@
 ---
-title: "typescript 기초"
+title: "typescript에서 타입 선언하기"
 date: 2020-03-05 15:40:00 -0400
 categories: typescript
 ---
+타입스크립트에서 타입을 선언하는 기본 방법을 정리했습니다.
+
 ## 타입 선언 (Type Declaration)
 
 타입은 소문자, 대문자를 구별하므로 주의가 필요하다. TypeScript가 "기본 제공하는 타입"은 모두 소문자이다.
@@ -286,7 +288,7 @@ const t: Tuple = ['', '']; // Error
 - `interface` : 라이브러리 제작할 때 등 API 명세를 작성할 때는 꼭 인터페이스를 사용. 상속을 통해 확장이 필요할 때 더 유리하다.
 - `type`: 좀더 제한적이므로 리액트 컴포넌트 props와 state를 사용할 때 고려하세요.  유니온(e.g. `type MyType = TypeA | TypeB`) 또는 튜플일 때 더 유리하다.
 
-[https://camo.githubusercontent.com/f00cd1e1d40c197e5cdb82c383952241d7e0dc10/68747470733a2f2f7062732e7477696d672e636f6d2f6d656469612f4477562d6f4f7358634149637432712e6a7067](https://camo.githubusercontent.com/f00cd1e1d40c197e5cdb82c383952241d7e0dc10/68747470733a2f2f7062732e7477696d672e636f6d2f6d656469612f4477562d6f4f7358634149637432712e6a7067)
+![https://camo.githubusercontent.com/f00cd1e1d40c197e5cdb82c383952241d7e0dc10/68747470733a2f2f7062732e7477696d672e636f6d2f6d656469612f4477562d6f4f7358634149637432712e6a7067](https://camo.githubusercontent.com/f00cd1e1d40c197e5cdb82c383952241d7e0dc10/68747470733a2f2f7062732e7477696d672e636f6d2f6d656469612f4477562d6f4f7358634149637432712e6a7067)
 
 ## 제네릭(generics)
 

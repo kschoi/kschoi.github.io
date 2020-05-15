@@ -3,15 +3,8 @@ title: "webpack 기본 이해하기"
 date: 2020-05-04 15:40:00 -0400
 categories: webpack
 ---
-인프런의 쉽게 배우는 Webpack 수강 후 내용을 정리했습니다. 
-
-# webpack 소개
-
-- 서로 연관 관계가 있는 웹 자원들을 js, css, img와 같은 스태틱한 자원으로 변환해주는 모듈 번들러
-- 자원들을 최적화해서 압축 등 웹페이지의 성능을 끌어올린다.
-
-
-
+webpack은 서로 연관 관계가 있는 웹 자원들을 js, css, img와 같은 스태틱한 자원으로 변환해주는 모듈 번들러입니다. 
+자원들을 최적화해서 압축 등 웹페이지의 성능을 끌어올려줍니다.
 
 ## webpack 철학
 
@@ -27,12 +20,14 @@ require('main.js');
 ## CLI
 
 #### install
+
 ```js
 npm i webpack webpack-cli -g
 npm i webpack webpack-cli
 ```
 
 #### build
+
 ```js
 webpack
 webpack src/index.js -o dist/bundle.js
@@ -44,6 +39,7 @@ webpack --display-error-details // error 발생 시 디버깅 정보를 상세�
 ```
 
 # webpack.config.js
+
 ```js
 // default
 var path = require('path');
@@ -60,6 +56,7 @@ module.exports = {
 
 ## entry
 - 시작점
+
 ```js
 // 여러가지 Entry 유형
 var config = {
@@ -81,6 +78,7 @@ var config = {
 
 ## output
 - 결과물
+
 ```js
 // entry에서 설정하고 묶은 파일의 결과값을 설정
 var path = require('path');
@@ -97,6 +95,7 @@ module.exports = {
 ```
 
 #### path.join() & path.resolve()
+
 ```js
 path.join('/foo', 'bar', 'baz/asdf'); // 해당 OS의 파일구분자를 이용하여 위치 조합
 // Returns: '/foo/bar/baz/asdf'
@@ -119,6 +118,7 @@ https://nodejs.org/api/path.html
 
 
 #### Output filename options
+
 ```js
 // 복수개 entry point에 대한 [name] 예시
 module.exports = {
@@ -140,6 +140,7 @@ module.exports = {
 ## loader
 - 웹팩은 자바스크립트 파일만 처리가 가능하도록 되어 있다.
 - 다른 형태의 웹 자원들 (img, css, ...) js로 변환하여 로딩하기 위해 loader가 필요하다.
+
 ```js
 module.exports = {
     mode: '',
@@ -185,6 +186,7 @@ module.exports = {
 
 ## plugins
 - Output 시점에 관여하는 커스텀 기능
+
 ```js
 var MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
@@ -225,6 +227,7 @@ module.exports = {
 ## resolve
 - 모듈 번들링 관점에서 봤을 때, 모듈 간의 의존성을 고려하여 로딩해야 함.
 - 따라서, 모듈을 어떤 위치에서 어떻게 로딩할지에 관해 정의하는 것
+
 ```js
 // webpack.config.js
 module.exports = {
@@ -244,6 +247,7 @@ module.exports = {
     }
 };
 ```
+
 ```js
 // index.js
 // 일반
@@ -262,11 +266,13 @@ import Utility from 'Utilities/utility';
 2. 서버 인메모리 컴파일 : 물리적인 파일패스로 접근할 수 없다. (가시적으로 볼 수 있는 파일 결과물이 없다.)
 
 #### 설치
+
 ```js
 npm i --save-dev webpack-dev-server
 ```
 
 #### 실행
+
 ```js
 webpack-dev-server --open
 // 또는 package.json scripts에 명령어 등록하여 간편 실행. cli 커스텀 명령어.
@@ -318,7 +324,9 @@ output: {
 
 
 ## devtool
+
 #### sourcemap 활용
+
 ```js
 module.exports = {
     ...
@@ -330,6 +338,7 @@ module.exports = {
 
 
 ## gulp 연동
+
 ```js
 // gulp와 webpack 모두 node.js 기반이기 때문에 통합해서 사용하기 쉽다
 var gulp = require('gulp');
@@ -349,6 +358,7 @@ gulp.task('default', function(){
 - webpack에 설정한 파일을 변경시, 파일에 직접 변경 내역을 저장하지 않고 메모리 공간을 활용한다.
 - 따라서, 변경된 파일 내역을 파일 디렉토리 구조안에서는 확인이 불가능하다.
 - 이미 노드를 쓰고 있을때, 웹팩을 붙이는 방법
+
 ```js
 // Options
 
@@ -365,6 +375,7 @@ contentBase: false,
 //gzip 압축방식을 이용하여 웹 자원의 사이즈를 줄인다.
 compress: true
 ```
+
 [추가옵션](https://webpack.js.org/configuration/dev-server/)
 
 

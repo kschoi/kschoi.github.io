@@ -99,7 +99,7 @@ author:
   name             : "Kyungsun Choi"
   avatar           : "/assets/images/profile_mini.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Frontend devloper, UI/UX Engineer"
-  location         : "hoehyeon, seoul, South Korea"
+  location         : "jonggak, seoul"
   email            : "kschoi0308@gmail.com"
   links:
     - label: "Email"

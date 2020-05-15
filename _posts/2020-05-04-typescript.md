@@ -1,6 +1,6 @@
 ---
 title: "typescript 기초"
-date: 2020-05-04 15:40:00 -0400
+date: 2020-03-05 15:40:00 -0400
 categories: typescript
 ---
 ## 타입 선언 (Type Declaration)

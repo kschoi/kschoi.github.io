@@ -1,5 +1,5 @@
 ---
-title: "babel.config.js vs .babelrc"
+title: "babel.config.js 파일과 .babelrc 차이점"
 date: 2020-05-17 15:40:00 -0400
 categories: cs
 ---

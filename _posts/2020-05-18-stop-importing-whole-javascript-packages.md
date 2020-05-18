@@ -62,6 +62,8 @@ Lodash를 사용하면, 버그도 회피하면서 코드를 훨씬 깔끔하게 
 
 ```import _ from ‘lodash’;```
 
+or
+
 ```const _ = require('lodash');```
 
 ![image2](https://miro.medium.com/max/700/1*DyhARPupbP7hsoBnf6jPfw.png)
@@ -70,10 +72,28 @@ Lodash를 사용하면, 버그도 회피하면서 코드를 훨씬 깔끔하게 
 
 ```import { get} from 'lodash';```
 
+or
+
 ```const { get } = require('lodash');```
 
 ![image3](https://miro.medium.com/max/700/1*7wbsdPBOpUz3NqCo6-hVog.png)
 
+
+보다시피 두 가지 방법 모두 Lodash가 제공하는 200+ 함수를 모두 포함하여 번들 사이즈가 23KB가 증가하는 것을 볼 수 있습니다.
+
+세번째 방법은 다른 결과를 보여줍니다.
+
+3. ```get.js``` 만 import 하기
+
+```import get from 'lodash/get';```
+
+or
+
+```const get = require('lodash/get');```
+
+![image4](https://miro.medium.com/max/700/1*Wm5ILeI9hLKSpQnzkoC8bQ.png)
+
+필요한 함수만 가져오므로써 번들 사이즈를 20kb 이상 줄였습니다.
 
 
 

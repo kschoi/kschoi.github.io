@@ -10,10 +10,10 @@ ES6에 완전히 익숙하지 않다면, 아래 코드가 낯설게 느껴지실
 
 ```jsx
 const Title = styled.h1`
-  font-size: 1.5em;
-	color: ${theme.primary};
-  text-align: center;
-	{(props) => props.border && 'border-top: 1px solid #000;' }
+font-size: 1.5em;
+color: ${theme.primary};
+text-align: center;
+{(props) => props.border && 'border-top: 1px solid #000;' }
 `;
 ```
 
@@ -37,11 +37,10 @@ function taggedTemplate(stringArray, variable, variable2) {
 
 const stringVar = " - 표현식1 - ";
 
-// 중요
 const customSentence = taggedTemplate`
-	첫 번째 string
-	${stringVar} 
-	두 번째 string
+첫 번째 string
+${stringVar} 
+두 번째 string
 `;
 
 console.log(customSentence)

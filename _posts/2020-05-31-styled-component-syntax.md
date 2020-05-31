@@ -33,13 +33,13 @@ const Title = styled.h1`
  * @variable: 첫번째 ${표현식}
  */
 function taggedTemplate(stringArray, variable, variable2) {
-	console.log(stringArray);
-	// [ '첫 번째 string', '두 번째 string' ]
+  console.log(stringArray);
+  // [ '첫 번째 string', '두 번째 string' ]
 
-	console.log(variable);
-	//  - 표현식1 -
+  console.log(variable);
+  //  - 표현식1 -
 
-	return `${stringArray[0]}${variable}${stringArray[1]}`;
+  return `${stringArray[0]}${variable}${stringArray[1]}`;
 }
 
 const stringVar = " - 표현식1 - ";
@@ -83,19 +83,19 @@ taggedTemplate 함수의 첫 번째 파라미터로 파싱된 string array가 �
 
 ```jsx
 const theme = {
-	spacing: {
-		min: "2px",
-		max: "24px",
-	},
-	colors: {
-		primary: "coral",
-		secondary: "peachpuff",
-	},
+  spacing: {
+    min: "2px",
+    max: "24px",
+  },
+  colors: {
+    primary: "coral",
+    secondary: "peachpuff",
+  },
 };
 
 function styled(css, ...variables) {
-	const computedCss = css.map((chunk, index) => `${chunk}${variables[index] || ""}`).join("");
-	return computedCss;
+  const computedCss = css.map((chunk, index) => `${chunk}${variables[index] || ""}`).join("");
+  return computedCss;
 }
 
 const Button = styled`
@@ -127,8 +127,8 @@ const Button = styled`
 
 ```jsx
 function styled(css, ...variables) {
-	const computedCss = css.map((chunk, index) => `${chunk}${variables[index] || ""}`).join("");
-	return computedCss;
+  const computedCss = css.map((chunk, index) => `${chunk}${variables[index] || ""}`).join("");
+  return computedCss;
 }
 ```
 
@@ -142,25 +142,25 @@ Tagged Template에서 어떻게 `props`에 접근 가능할까요?
 
 ```jsx
 function styled(css, ...variables) {
-	const theme = {
-		spacing: {
-			min: "2px",
-			max: "24px",
-		},
-		colors: {
-			primary: "coral",
-			secondary: "peachpuff",
-		},
-	};
+  const theme = {
+    spacing: {
+      min: "2px",
+      max: "24px",
+    },
+    colors: {
+      primary: "coral",
+      secondary: "peachpuff",
+    },
+  };
 
-	const props = {
-		theme,
-		primary: true,
-		bigSpacing: true,
-	};
+  const props = {
+    theme,
+    primary: true,
+    bigSpacing: true,
+  };
 
-	const computedCss = css.map((chunk, index) => `${chunk}${variables[index] ? variables[index](props) : ""}`).join("");
-	return computedCss;
+  const computedCss = css.map((chunk, index) => `${chunk}${variables[index] ? variables[index](props) : ""}`).join("");
+  return computedCss;
 }
 
 const Button = styled`
@@ -192,15 +192,15 @@ const Button = styled`
 <style type="text/css">
 @media (min-width: 64em) {
   .archive pre { font-size: 0.8em; }
-	.archive li,
-	.archive p {
-		font-size: 0.84em;
-	}
+  .archive li,
+  .archive p {
+    font-size: 0.84em;
+  }
 }
 @media (min-width: 80em) {
-	.archive li,
-	.archive p {
-		font-size: 0.72em;
-	}
-}
+  .archive li,
+  .archive p {
+    font-size: 0.72em;
+  }
+  }
 </style>

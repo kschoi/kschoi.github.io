@@ -143,14 +143,15 @@ CDN에 대한 더 자세한 안내는 이 글을 살펴보길 바란다. 일반�
 
 <style type="text/css">
 @media (min-width: 64em) {
-  .archive pre,
+  .archive pre {
+		font-size: 0.9em;
+	}
 	.archive li,
 	.archive p {
 		font-size: 0.84em;
 	}
 }
 @media (min-width: 80em) {
-  .archive pre,
 	.archive li,
 	.archive p {
 		font-size: 0.72em;

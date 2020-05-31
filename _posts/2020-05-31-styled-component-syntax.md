@@ -25,9 +25,12 @@ text-align: center;
 아래는 이해에 도움이 될만한 간단한 샘플 코드입니다.
 
 ```jsx
-// Tagged Template 샘플
-// @stringArray: ${표현식} 기준으로 split된 string 배열
-// @variable: 첫번째 ${표현식}
+/** 
+ * Tagged Template 샘플
+ * 
+ * @stringArray: ${표현식} 기준으로 split된 string 배열
+ * @variable: 첫번째 ${표현식}
+ */
 function taggedTemplate(stringArray, variable, variable2) {
   console.log(stringArray)
   // [ '첫 번째 string', '두 번째 string' ]

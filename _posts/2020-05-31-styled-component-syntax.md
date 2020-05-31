@@ -4,7 +4,6 @@ date: 2020-05-31 11:30:00 -0400
 categories: cs
 ---
 <style type="text/css">
-
 @media (min-width: 48em) {
 	.archive p {
 		font-size: 0.9em;

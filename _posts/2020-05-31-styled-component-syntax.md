@@ -4,19 +4,16 @@ date: 2020-05-31 11:30:00 -0400
 categories: cs
 ---
 <style type="text/css">
-@media (min-width: 48em) {
-	.archive p {
-		font-size: 0.9em;
-	}
-}
 @media (min-width: 64em) {
+  .archive pre,
 	.archive p {
-		font-size: 0.8em;
+		font-size: 0.84em;
 	}
 }
 @media (min-width: 80em) {
+  .archive pre,
 	.archive p {
-		font-size: 0.7em;
+		font-size: 0.72em;
 	}
 }
 </style>
@@ -78,7 +75,7 @@ taggedTemplate``
 ```
 
 이렇게 호출하면 백틱 안쪽에 작성한 템플릿 리터럴이 파싱되는데, 내부에 작성된 `${표현식}`을 구분자로 하여 string이 split됩니다.
-`Tagged Template` 의 첫 번째 파라미터로 스플리팅된 string array가 전달되고,  각 `${표현식`의 평가값들이 두번째 파라미터부터 순서대로 전달됩니다.
+`Tagged Template` 의 첫 번째 파라미터로 스플리팅된 string array가 전달되고,  각 `${표현식}`의 평가값들이 두번째 파라미터부터 순서대로 전달됩니다.
 전달받은 파라미터를 활용하여 원하는 어떤 방식으로든 가공하여 결과값을 리턴하면 됩니다.
 
 ### Styled Components 기본 작동 방식 흉내내기

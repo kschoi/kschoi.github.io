@@ -3,6 +3,21 @@ title: "webpack 기본 이해하기"
 date: 2020-05-04 15:40:00 -0400
 categories: webpack
 ---
+<style type="text/css">
+@media (min-width: 64em) {
+  .archive pre,
+	.archive p {
+		font-size: 0.84em;
+	}
+}
+@media (min-width: 80em) {
+  .archive pre,
+	.archive p {
+		font-size: 0.72em;
+	}
+}
+</style>
+
 webpack은 서로 연관 관계가 있는 웹 자원들을 js, css, img와 같은 스태틱한 자원으로 변환해주는 모듈 번들러입니다. 
 자원들을 최적화해서 압축 등 웹페이지의 성능을 끌어올려줍니다.
 

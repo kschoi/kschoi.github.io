@@ -3,6 +3,20 @@ title: "신입 웹 개발자일 때 알았더라면 좋았을 기본 웹 아키�
 date: 2020-05-17 15:40:00 -0400
 categories: cs
 ---
+<style type="text/css">
+@media (min-width: 64em) {
+  .archive pre,
+	.archive p {
+		font-size: 0.84em;
+	}
+}
+@media (min-width: 80em) {
+  .archive pre,
+	.archive p {
+		font-size: 0.72em;
+	}
+}
+</style>
 
 이 글은 미디엄의 Web Archtecture 101(https://engineering.videoblocks.com/web-architecture-101-a3224e126947) 글을 보기 쉽게 번역한 글입니다. Storyblocks라는 웹 서비스의 구성을 통해 입문자 관점에서 모던 웹 아키텍처를 설명해주고 있습니다.
 

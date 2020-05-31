@@ -3,6 +3,20 @@ title: "자바스크립트 패키지 전체를 import하지 않는 방법"
 date: 2020-05-18 06:53:00 -0400
 categories: cs
 ---
+<style type="text/css">
+@media (min-width: 64em) {
+  .archive pre,
+	.archive p {
+		font-size: 0.84em;
+	}
+}
+@media (min-width: 80em) {
+  .archive pre,
+	.archive p {
+		font-size: 0.72em;
+	}
+}
+</style>
 
 웹팩 빌드 환경에서 개발할 때 외부 패키지를 import할 일이 많습니다.
 그런데 import하는 방식에 따라 빌드되는 번들 파일 사이즈가 다를 수 있습니다. 

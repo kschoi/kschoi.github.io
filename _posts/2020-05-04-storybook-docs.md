@@ -3,6 +3,21 @@ title: "Storybook docs 애드온 적용하기"
 date: 2020-05-04 15:40:00 -0400
 categories: storybook
 ---
+<style type="text/css">
+@media (min-width: 64em) {
+  .archive pre,
+	.archive p {
+		font-size: 0.84em;
+	}
+}
+@media (min-width: 80em) {
+  .archive pre,
+	.archive p {
+		font-size: 0.72em;
+	}
+}
+</style>
+
 Storybook Docs는 컴포넌트 스토리들을 문서로 변환해주는 스토리북 애드온입니다.
 
 

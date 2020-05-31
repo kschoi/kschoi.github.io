@@ -1,17 +1,17 @@
 @charset "utf-8";
 
 @media (min-width: 48em) {
-	p {
+	.archive p {
 		font-size: 0.9em;
 	}
 }
 @media (min-width: 64em) {
-	p {
+	.archive p {
 		font-size: 0.8em;
 	}
 }
 @media (min-width: 80em) {
-	p {
+	.archive p {
 		font-size: 0.7em;
 	}
 }

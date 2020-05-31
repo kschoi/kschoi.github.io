@@ -33,26 +33,21 @@ function taggedTemplate(stringArray, variable, variable2) {
 
   console.log(variable)
   //  - 표현식1 - 
-  console.log(variable2)
-  //  - 표현식2 - 
 
-  return `${stringArray[0]}${variable}${stringArray[1]${variable2}${stringArray[2]}`
+  return `${stringArray[0]}${variable}${stringArray[1]}`
 }
 
 const stringVar = " - 표현식1 - ";
-const stringVar = " - 표현식2 - ";
 
 // 중요
 const customSentence = taggedTemplate`
 	첫 번째 string
 	${stringVar} 
 	두 번째 string
-	${stringVar2} 
-	세 번째 string
 `;
 
 console.log(customSentence)
-// 첫 번째 string - 표현식1 - 두 번째 string - 표현식2 - 세 번째 string
+// 첫 번째 string - 표현식1 - 두 번째 string
 ```
 
 taggedTemplate 이름을 가진 함수는 첫 번째 파라미터로 string array를 두번째 파라미터로 변수 하나를 받는 일반적인 함수입니다. 함수를 정의할 때는 특별할 것이 없습니다. 중요한 차이는 호출할 때 일어납니다.

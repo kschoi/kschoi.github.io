@@ -3,20 +3,6 @@ title: "typescript에서 타입 선언하기"
 date: 2020-03-05 15:40:00 -0400
 categories: typescript
 ---
-<style type="text/css">
-@media (min-width: 64em) {
-  .archive pre,
-	.archive p {
-		font-size: 0.84em;
-	}
-}
-@media (min-width: 80em) {
-  .archive pre,
-	.archive p {
-		font-size: 0.72em;
-	}
-}
-</style>
 
 타입스크립트에서 타입을 선언하는 기본 방법을 정리했습니다.
 
@@ -406,3 +392,20 @@ arr.push(4); // error
 arr[0] = 100; // error
 arr = [10, 20, 30]; // error
 ```
+
+
+
+<style type="text/css">
+@media (min-width: 64em) {
+  .archive pre,
+	.archive p {
+		font-size: 0.84em;
+	}
+}
+@media (min-width: 80em) {
+  .archive pre,
+	.archive p {
+		font-size: 0.72em;
+	}
+}
+</style>

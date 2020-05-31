@@ -3,20 +3,6 @@ title: "react-router 이해하기"
 date: 2020-05-04 08:26:28 -0400
 categories: react
 ---
-<style type="text/css">
-@media (min-width: 64em) {
-  .archive pre,
-	.archive p {
-		font-size: 0.84em;
-	}
-}
-@media (min-width: 80em) {
-  .archive pre,
-	.archive p {
-		font-size: 0.72em;
-	}
-}
-</style>
 
 ## Companion Libraries
 
@@ -85,3 +71,19 @@ export const createStream = formValues => async (dispatch, getState) => {
   **history.push('/');**
 };
 ```
+
+
+<style type="text/css">
+@media (min-width: 64em) {
+  .archive pre,
+	.archive p {
+		font-size: 0.84em;
+	}
+}
+@media (min-width: 80em) {
+  .archive pre,
+	.archive p {
+		font-size: 0.72em;
+	}
+}
+</style>

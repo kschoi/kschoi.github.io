@@ -3,20 +3,6 @@ title: "babel.config.js 파일과 .babelrc 차이점"
 date: 2020-05-17 15:40:00 -0400
 categories: cs
 ---
-<style type="text/css">
-@media (min-width: 64em) {
-  .archive pre,
-	.archive p {
-		font-size: 0.84em;
-	}
-}
-@media (min-width: 80em) {
-  .archive pre,
-	.archive p {
-		font-size: 0.72em;
-	}
-}
-</style>
 
 바벨을 설정할 때, babel.config.js 파일과 .babelrc 파일의 차이점이 궁금해서 찾아보았습니다. 
 
@@ -54,3 +40,19 @@ categories: cs
 ## 참고
 - https://babeljs.io/docs/en/config-files#project-wide-configuration
 - https://stackoverflow.com/questions/60288375/when-to-use-babel-config-js-and-babelrc
+
+
+<style type="text/css">
+@media (min-width: 64em) {
+  .archive pre,
+	.archive p {
+		font-size: 0.84em;
+	}
+}
+@media (min-width: 80em) {
+  .archive pre,
+	.archive p {
+		font-size: 0.72em;
+	}
+}
+</style>

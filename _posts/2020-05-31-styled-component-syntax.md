@@ -19,6 +19,7 @@ text-align: center;
 
 위 코드를 이해하려면 ES6의  `Tagged Template` Literals를 살펴봐야 합니다. 
 `Tagged Template`은 백틱으로 작성한 템플릿 리터럴을 파싱한 뒤 실행되는 "함수"입니다.
+
 아래는 이해에 도움이 될만한 간단한 샘플 코드입니다.
 
 ```jsx
@@ -47,14 +48,17 @@ console.log(customSentence)
 // 첫 번째 string - 표현식1 - 두 번째 string
 ```
 
-taggedTemplate 이름을 가진 함수는 첫 번째 파라미터로 string array를 두번째 파라미터로 변수 하나를 받는 일반적인 함수입니다. 함수를 정의할 때는 특별할 것이 없습니다. 중요한 차이는 호출할 때 일어납니다.
+taggedTemplate 이름을 가진 함수는 첫 번째 파라미터로 string array를 두번째 파라미터로 변수 하나를 받는 일반적인 함수입니다. 함수를 정의할 때는 특별할 것이 없습니다. 
 
+중요한 차이는 호출할 때 일어납니다.
 `Tagged Template` 은 아래의 전통적인 방법 대신,
+
 ```jsx
 taggedTemplate()
 ```
 
 아래와 같은 포맷으로 호출합니다.
+
 ```jsx
 taggedTemplate``
 ```
@@ -108,6 +112,7 @@ const Button = styled`
 
 `Tagged Template`인 `styled`와 이전 샘플 코드와 차이는 `...variables` 부분입니다.
 이전 샘플 코드에서는 넘어올 ${표현식}을 각각의 파라미터로 받고 가공하여 결과값을 리턴했는데, 이 코드는 전달된 모든 `${표현식}`을 스프레드 연산자를 통해  variables이라는 하나의 변수로 받고 있습니다.
+
 이 방식은 매우 유용한데, 단순히 아래와 같이 처리가 가능하기 때문입니다.
 
 ```jsx

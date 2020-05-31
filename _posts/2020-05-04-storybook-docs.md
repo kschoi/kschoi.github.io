@@ -159,12 +159,14 @@ markdown documentation.
 <style type="text/css">
 @media (min-width: 64em) {
   .archive pre,
+	.archive li,
 	.archive p {
 		font-size: 0.84em;
 	}
 }
 @media (min-width: 80em) {
   .archive pre,
+	.archive li,
 	.archive p {
 		font-size: 0.72em;
 	}

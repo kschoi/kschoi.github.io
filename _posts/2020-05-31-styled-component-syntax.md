@@ -3,6 +3,24 @@ title: "Styled Component Syntax 이해하기"
 date: 2020-05-31 11:30:00 -0400
 categories: cs
 ---
+<style type="text/css">
+
+@media (min-width: 48em) {
+	.archive p {
+		font-size: 0.9em;
+	}
+}
+@media (min-width: 64em) {
+	.archive p {
+		font-size: 0.8em;
+	}
+}
+@media (min-width: 80em) {
+	.archive p {
+		font-size: 0.7em;
+	}
+}
+</style>
 
 SSG.COM 모바일 UI 컴포넌트를 emotion.js 라이브러를 사용하여 스타일링하고 있습니다. 스타일드 컴포넌트를 작성하는 몇 개월동안, 저는 `Tagged Template` Literals syntax에 대한 이해가 없었습니다. 이 포스팅은 저처럼 "이게 되는건 알겠는데, 어떻게 되는거지?" 궁금하신 분들을 위한 글입니다. 
 

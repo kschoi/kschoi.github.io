@@ -25,8 +25,8 @@ let num: number = 10;
 **string**
 
 ```tsx
-let str: string = 'hi';
-let greeting: string = `Hello, my name is ${ myName }.`; // ES6 템플릿 대입문
+let str: string = "hi";
+let greeting: string = `Hello, my name is ${myName}.`; // ES6 템플릿 대입문
 ```
 
 **null**
@@ -50,10 +50,10 @@ const obj: object = {};
 **array**
 
 ```tsx
-let arr: number[] = [1,2,3];
+let arr: number[] = [1, 2, 3];
 
 // 제네릭 배열 타입
-let arr: Array<number> = [1,2,3]; 
+let arr: Array<number> = [1, 2, 3];
 ```
 
 **tuple**
@@ -61,11 +61,11 @@ let arr: Array<number> = [1,2,3];
 고정된 요소수 만큼의 타입을 미리 선언후 순서에 맞게 배열을 표현
 
 ```tsx
-let arr: [string, number] = ['hi', 10];
+let arr: [string, number] = ["hi", 10];
 let tuple: [string, number];
-tuple = ['hello', 10]; // OK
-tuple = [10, 'hello']; // Error
-tuple = ['hello', 10, 'world', 100]; // Error
+tuple = ["hello", 10]; // OK
+tuple = [10, "hello"]; // Error
+tuple = ["hello", 10, "world", 100]; // Error
 tuple.push(true); // Error
 ```
 
@@ -74,22 +74,34 @@ tuple.push(true); // Error
 특정 값(상수)들의 집합을 의미하는 자료형
 
 ```tsx
-enum Color1 {Red, Green, Blue};
+enum Color1 {
+	Red,
+	Green,
+	Blue,
+}
 let c1: Color1 = Color1.Green;
 
 // export하거나 값을 줄 수 있다.
 export enum MatchResult {
-  HomeWin = 'H',
-  AwayWin = 'A',
-  Draw = 'D'
+	HomeWin = "H",
+	AwayWin = "A",
+	Draw = "D",
 }
 
 // 인덱스 번호로도 접근 가능
-enum Avengers { Capt, IronMan, Thor }
+enum Avengers {
+	Capt,
+	IronMan,
+	Thor,
+}
 let hero: Avengers = Avengers[0];
 
 // 초기 값을 주면 초기 값부터 차례로 1씩 증가
-enum Avengers { Capt = 2, IronMan, Thor }
+enum Avengers {
+	Capt = 2,
+	IronMan,
+	Thor,
+}
 let hero: Avengers = Avengers[2]; // Capt
 let hero: Avengers = Avengers[4]; // Thor
 ```
@@ -100,7 +112,7 @@ let hero: Avengers = Avengers[4]; // Thor
 
 ```tsx
 let notSure: any = 4;
-notSure = 'maybe a string instead';
+notSure = "maybe a string instead";
 notSure = false; // okay, definitely a boolean
 ```
 
@@ -110,7 +122,7 @@ notSure = false; // okay, definitely a boolean
 
 ```tsx
 function warnUser(): void {
-  console.log("This is my warning message");
+	console.log("This is my warning message");
 }
 ```
 
@@ -121,10 +133,10 @@ function warnUser(): void {
 ```tsx
 // 이 함수는 절대 함수의 끝까지 실행되지 않는다는 의미
 function infiniteLoop(): never {
-  while (true) {}
+	while (true) {}
 }
 function error(message: string): never {
-  throw new Error(message);
+	throw new Error(message);
 }
 ```
 
@@ -133,13 +145,13 @@ function error(message: string): never {
 개발자가 해당 타입에 대해 확신이 있을 때 사용하는 타입 지정 방식
 
 ```tsx
-let shouldString: any = 'hi';
+let shouldString: any = "hi";
 let stringLength: number = (<string>shouldString).length;
 ```
 
 ```tsx
 // as 문법 활용
-let shouldString: any = 'hi';
+let shouldString: any = "hi";
 let stringLength: number = (shouldString as string).length;
 ```
 
@@ -149,7 +161,7 @@ let stringLength: number = (shouldString as string).length;
 
 ```tsx
 function sum(a: 인자타입, b: 인자타입): 반환값타입 {
-  return a + b;
+	return a + b;
 }
 ```
 
@@ -158,7 +170,7 @@ function sum(a: 인자타입, b: 인자타입): 반환값타입 {
 ```tsx
 // 함수 기본
 function sum(a: number, b: number): number {
-  return a + b;
+	return a + b;
 }
 sum(10, 20); // 30
 sum(10, 20, 30); // error, too many parameters
@@ -166,25 +178,25 @@ sum(10); // error, too few parameters
 
 // rest 문법 적용할 때
 function sum(a: number, ...nums: number[]): number {
-  const totalOfNums = 0;
-  for (let key in nums) {
-    totalOfNums += nums[key];
-  }
-  return a + totalOfNums;
+	const totalOfNums = 0;
+	for (let key in nums) {
+		totalOfNums += nums[key];
+	}
+	return a + totalOfNums;
 }
 
 // this 사용하기
 interface UIElement {
-  // 아래 함수의 `this: void` 코드는 함수에 `this` 타입을 선언할 필요가 없다는 의미입니다.
-  addClickListener(onclick: (this: void, e: Event) => void): void;
+	// 아래 함수의 `this: void` 코드는 함수에 `this` 타입을 선언할 필요가 없다는 의미입니다.
+	addClickListener(onclick: (this: void, e: Event) => void): void;
 }
 
 class Handler {
-    info: string;
-    onClick(this: Handler, e: Event) {
-        // 위의 `UIElement` 인터페이스의 스펙에 `this`가 필요없다고 했지만 사용했기 때문에 에러가 발생합니다.
-        this.info = e.message;
-    }
+	info: string;
+	onClick(this: Handler, e: Event) {
+		// 위의 `UIElement` 인터페이스의 스펙에 `this`가 필요없다고 했지만 사용했기 때문에 에러가 발생합니다.
+		this.info = e.message;
+	}
 }
 let handler = new Handler();
 uiElement.addClickListener(handler.onClick); // error!
@@ -196,11 +208,11 @@ uiElement.addClickListener(handler.onClick); // error!
 
 ```tsx
 interface 인터페이스_이름 {
-	속성: 타입;                                      // 기본형식
-  속성?: 타입;                                     // 선택적 프로퍼티. 반드시 구현하지 않아도 될 속성명 뒤에 ? 추가
-	readonly 속성: 타입;                             // 읽기 전용 속성 앞에 readonly 추가
-  [propName: string]: any;                        // 인터페이스 정의하지 않은 속성들을 추가로 사용하고 싶을 때 (가급적 사용하지 말아야 할듯)
-	(username: string, password: string): boolean;  // 함수. 함수의 인자의 타입과 반환 값의 타입을 정한다
+	속성: 타입; // 기본형식
+	속성?: 타입; // 선택적 프로퍼티. 반드시 구현하지 않아도 될 속성명 뒤에 ? 추가
+	readonly 속성: 타입; // 읽기 전용 속성 앞에 readonly 추가
+	[propName: string]: any; // 인터페이스 정의하지 않은 속성들을 추가로 사용하고 싶을 때 (가급적 사용하지 말아야 할듯)
+	(username: string, password: string): boolean; // 함수. 함수의 인자의 타입과 반환 값의 타입을 정한다
 }
 ```
 
@@ -209,42 +221,42 @@ interface 인터페이스_이름 {
 ```tsx
 // 인터페이스 기본 예시
 interface CraftBeer {
-  name: string;
-  hop?: number;
+	name: string;
+	hop?: number;
 	readonly brand: string;
 }
 
 let myBeer = {
-  name: 'Saporo',
-  brand: 'Belgian Monk'
+	name: "Saporo",
+	brand: "Belgian Monk",
 };
-myBeer.brand = 'Korean Carpenter'; // error!
+myBeer.brand = "Korean Carpenter"; // error!
 function brewBeer(beer: CraftBeer) {
-  console.log(beer.name); // Saporo
+	console.log(beer.name); // Saporo
 }
 brewBeer(myBeer);
 
 // 인터페이스 함수 정의
 interface login {
-  (username: string, password: string): boolean;
+	(username: string, password: string): boolean;
 }
 
 let loginUser: login;
-loginUser = function(id: string, pw: string) {
-  console.log('로그인 했습니다');
-  return true;
-}
+loginUser = function (id: string, pw: string) {
+	console.log("로그인 했습니다");
+	return true;
+};
 
 // 인터페이스 상속
 interface Person {
-  name: string;
+	name: string;
 }
 interface Developer extends Person {
-  skill: string;
+	skill: string;
 }
 let fe = {} as Developer;
-fe.name = 'josh';
-fe.skill = 'TypeScript';
+fe.name = "josh";
+fe.skill = "TypeScript";
 ```
 
 ## 타입 앨리어스(type alias)
@@ -255,19 +267,19 @@ fe.skill = 'TypeScript';
 
 ```tsx
 // 문자열 리터럴로 타입 지정
-type Str = 'Lee';
+type Str = "Lee";
 
 // 유니온 타입으로 타입 지정
 type Union = string | null;
 
 // 문자열 유니온 타입으로 타입 지정
-type Name = 'Lee' | 'Kim';
+type Name = "Lee" | "Kim";
 
 // 숫자 리터럴 유니온 타입으로 타입 지정
 type Num = 1 | 2 | 3 | 4 | 5;
 
 // 객체 리터럴 유니온 타입으로 타입 지정
-type Obj = {a: 1} | {b: 2};
+type Obj = { a: 1 } | { b: 2 };
 
 // 함수 유니온 타입으로 타입 지정
 type Func = (() => string) | (() => void);
@@ -277,7 +289,7 @@ type Shape = Square | Rectangle | Circle;
 
 // 튜플로 타입 지정
 type Tuple = [string, boolean];
-const t: Tuple = ['', '']; // Error
+const t: Tuple = ["", ""]; // Error
 ```
 
 ## 타입 앨리어스 or 인터페이스?
@@ -287,7 +299,7 @@ const t: Tuple = ['', '']; // Error
 아래가 도움이 될만한 규칙이다. ([출처](https://github.com/typescript-cheatsheets/react-typescript-cheatsheet/blob/master/README.md#types-or-interfaces))
 
 - `interface` : 라이브러리 제작할 때 등 API 명세를 작성할 때는 꼭 인터페이스를 사용. 상속을 통해 확장이 필요할 때 더 유리하다.
-- `type`: 좀더 제한적이므로 리액트 컴포넌트 props와 state를 사용할 때 고려하세요.  유니온(e.g. `type MyType = TypeA | TypeB`) 또는 튜플일 때 더 유리하다.
+- `type`: 좀더 제한적이므로 리액트 컴포넌트 props와 state를 사용할 때 고려하세요. 유니온(e.g. `type MyType = TypeA | TypeB`) 또는 튜플일 때 더 유리하다.
 
 ![https://camo.githubusercontent.com/f00cd1e1d40c197e5cdb82c383952241d7e0dc10/68747470733a2f2f7062732e7477696d672e636f6d2f6d656469612f4477562d6f4f7358634149637432712e6a7067](https://camo.githubusercontent.com/f00cd1e1d40c197e5cdb82c383952241d7e0dc10/68747470733a2f2f7062732e7477696d672e636f6d2f6d656469612f4477562d6f4f7358634149637432712e6a7067)
 
@@ -297,7 +309,7 @@ const t: Tuple = ['', '']; // Error
 
 ```tsx
 function logText<T>(text: T): T {
-  return text;
+	return text;
 }
 
 // # 사용1
@@ -311,38 +323,38 @@ const text = logText("Hello Generic");
 ```tsx
 // 배열1
 function logText<T>(text: T[]): T[] {
-  console.log(text.length); // 제네릭 타입이 배열이기 때문에 `length`를 허용합니다.
-  return text;
+	console.log(text.length); // 제네릭 타입이 배열이기 때문에 `length`를 허용합니다.
+	return text;
 }
 ```
 
 ```tsx
 // 배열2
 function logText<T>(text: Array<T>): Array<T> {
-  console.log(text.length);
-  return text;
+	console.log(text.length);
+	return text;
 }
 ```
 
 ```tsx
 // 함수
 function logText<T>(text: T): T {
-  return text;
+	return text;
 }
 // #1
 let str: <T>(text: T) => T = logText;
 // #2
-let str: {<T>(text: T): T} = logText;
+let str: { <T>(text: T): T } = logText;
 ```
 
 ### 제네릭 인터페이스
 
 ```tsx
 interface GenericLogTextFn {
-  <T>(text: T): T;
+	<T>(text: T): T;
 }
 function logText<T>(text: T): T {
-  return text;
+	return text;
 }
 let myString: GenericLogTextFn = logText; // Okay
 ```
@@ -350,10 +362,10 @@ let myString: GenericLogTextFn = logText; // Okay
 ```tsx
 // OR
 interface GenericLogTextFn<T> {
-  (text: T): T;
+	(text: T): T;
 }
 function logText<T>(text: T): T {
-  return text;
+	return text;
 }
 let myString: GenericLogTextFn<string> = logText;
 ```
@@ -363,19 +375,19 @@ let myString: GenericLogTextFn<string> = logText;
 ```tsx
 // 타입에 대한 강제는 아니지만 length에 대해 동작하는 인자만 넘겨받을 수 있게 됨
 interface LengthWise {
-  length: number;
+	length: number;
 }
 
 function logText<T extends LengthWise>(text: T): T {
-  console.log(text.length);
-  return text;
+	console.log(text.length);
+	return text;
 }
 ```
 
 ```tsx
 // 객체 속성 비교 예제
 function getProperty<T, O extends keyof T>(obj: T, key: O) {
-  return obj[key];  
+	return obj[key];
 }
 let obj = { a: 1, b: 2, c: 3 };
 
@@ -386,18 +398,16 @@ getProperty(obj, "z"); // error: "z"는 "a", "b", "c" 속성에 해당하지 않
 배열을 선언할 때 ReadonlyArray<T> 타입을 사용하면 읽기 전용 배열 생성 가능하다
 
 ```tsx
-let arr: ReadonlyArray<number> = [1,2,3];
-arr.splice(0,1); // error
+let arr: ReadonlyArray<number> = [1, 2, 3];
+arr.splice(0, 1); // error
 arr.push(4); // error
 arr[0] = 100; // error
 arr = [10, 20, 30]; // error
 ```
 
-
-
 <style type="text/css">
 @media (min-width: 64em) {
-  .archive pre { font-size: 0.85em; }
+  .archive pre { font-size: 0.8em; }
 	.archive li,
 	.archive p {
 		font-size: 0.84em;

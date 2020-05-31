@@ -25,7 +25,7 @@ BrowserRouter는 history 객체를 자동으로 생성하고 컴포넌트 단위
 ### history.js
 
 ```jsx
-import { createBrowserHistory } from 'history';
+import { createBrowserHistory } from "history";
 
 export default createBrowserHistory();
 ```
@@ -72,10 +72,9 @@ export const createStream = formValues => async (dispatch, getState) => {
 };
 ```
 
-
 <style type="text/css">
 @media (min-width: 64em) {
-  .archive pre { font-size: 0.85em; }
+  .archive pre { font-size: 0.8em; }
 	.archive li,
 	.archive p {
 		font-size: 0.84em;

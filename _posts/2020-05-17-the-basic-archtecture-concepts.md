@@ -10,7 +10,7 @@ categories: cs
 
 ![https://images.ctfassets.net/rpmifyuylbfw/6Qv56PUiQwmgYEokCWKGgW/d7d470aef20abadf6dd29c5de023e529/main.png](https://images.ctfassets.net/rpmifyuylbfw/6Qv56PUiQwmgYEokCWKGgW/d7d470aef20abadf6dd29c5de023e529/main.png)
 
-*모던 웹 애플리케이션 아키텍쳐 개요*
+_모던 웹 애플리케이션 아키텍쳐 개요_
 
 위의 다이어그램은 우리 Storyblocks의 아키텍쳐를 꽤 잘 나타낸다. 당신이 경험 많은 웹 개발자가 아니라면 아마도 꽤 복잡하다고 생각할 것이다. 각각의 컴포넌트를 자세히 살펴보기 전에 아래의 예시를 살펴보면 조금 더 다가서기 쉬워질 것이다.
 
@@ -18,7 +18,7 @@ categories: cs
 
 ![storyblocks](/assets/images/posts/storyblocks.png)
 
-사용자가 구글에서 “Strong Beautiful Fog And Sunbeams In The Forest”을 검색한다. 
+사용자가 구글에서 “Strong Beautiful Fog And Sunbeams In The Forest”을 검색한다.
 [첫번째 검색 결과](https://www.google.com/search?q=Strong+Beautiful+Fog+And+Sunbeams+In+The+Forest&rlz=1C1GCEU_koKR883KR883&oq=Strong+Beautiful+Fog+And+Sunbeams+In+The+Forest&aqs=chrome..69i57j69i60l3.303j0j8&sourceid=chrome&ie=UTF-8)에 Storyblocks 사이트의 stock 사진이 함께 노출된다. 사용자는 결과를 클릭하고 브라우저는 이미지 상세 페이지로 이동한다. 보이지 않지만, 브라우저 내부에서는 **DNS 서버**에 Storyblocks 사이트에 어떻게 접속할 수 있는지 물어본 후 Storyblocks에 접근을 시도한다.
 
 브라우저 요청은 Storyblocks 측의 **로드 밸런서**에 도착하고, 서비스를 운영하기 위해 동작 중인 10여 개의 서버 중 하나를 랜덤하게 선택해서 요청을 처리한다. **웹 서버**는 **캐싱 서비스**에서 필요한 이미지 정보를 가져온 후 더 필요한 정보는 **데이터베이스**에 요청한다. 사용자에게 전달한 이미지의 컬러 프로필이 아직 만들어지지 않았음을 인지한 후 “컬러 프로필” 잡(job)을 **잡 큐**에 보낸다. **잡 서버**는 큐에 추가된 것들을 비동기적으로 처리한 후 데이터베이스에 결과를 적절히 업데이트한다.
@@ -99,7 +99,7 @@ Storyblocks를 예로 들자면, 우리의 마켓플레이스를 지원하는 �
 
 ![https://images.ctfassets.net/rpmifyuylbfw/5gJakNIGvuS42easQcMeGi/e40692a0b6a26aa9a794b9df34c5afac/02.png](https://images.ctfassets.net/rpmifyuylbfw/5gJakNIGvuS42easQcMeGi/e40692a0b6a26aa9a794b9df34c5afac/02.png)
 
-*3개의 문서의 제목이 어떻게 역 인덱스로 변환되어서 특정 키워드를 포함한 제목을 가진 문서를 찾을 수 있도록 활용하는지를 보여주는 예제다. 보통 ‘in’, ‘the’, ‘with’ 같은 일반적인 단어(stop 단어라고 불린다)는 역 인덱스에 포함되지 않음을 주의 깊게 보라.*
+_3개의 문서의 제목이 어떻게 역 인덱스로 변환되어서 특정 키워드를 포함한 제목을 가진 문서를 찾을 수 있도록 활용하는지를 보여주는 예제다. 보통 ‘in’, ‘the’, ‘with’ 같은 일반적인 단어(stop 단어라고 불린다)는 역 인덱스에 포함되지 않음을 주의 깊게 보라._
 
 어떤 데이터베이스에서는 전체 텍스트 검색을 바로 사용할 수 있지만(MySQL은 전체 텍스트 검색을 지원한다), 보통 역 인덱스를 연산하고 쿼리 인터페이스를 제공하는 “검색 서비스”를 분리해서 운영하는 사례가 많다. 오늘날 가장 인기 있는 전체 텍스트 검색 플랫폼은 Elasticsearch지만 Sphinx 또는 Apache Solr 같은 다른 선택지도 있다.
 
@@ -140,10 +140,9 @@ CDN에 대한 더 자세한 안내는 이 글을 살펴보길 바란다. 일반�
 
 출처 : [https://blog.rhostem.com/posts/2018-07-22-web-architecture-101](https://blog.rhostem.com/posts/2018-07-22-web-architecture-101)
 
-
 <style type="text/css">
 @media (min-width: 64em) {
-  .archive pre { font-size: 0.85em; }
+  .archive pre { font-size: 0.8em; }
 	.archive li,
 	.archive p {
 		font-size: 0.84em;

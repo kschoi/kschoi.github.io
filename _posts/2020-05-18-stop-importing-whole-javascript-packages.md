@@ -102,9 +102,7 @@ or
 
 <style type="text/css">
 @media (min-width: 64em) {
-  .archive pre {
-		font-size: 0.9em;
-	}
+  .archive pre { font-size: 0.85em; }
 	.archive li,
 	.archive p {
 		font-size: 0.84em;

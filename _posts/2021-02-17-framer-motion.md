@@ -2,7 +2,7 @@
 
 # 1. 어떤 일을 할 수 있나요?
 
-framer-motion은 리액트를 위한 웹 애니메이션, 제스처 오픈소스 라이브러리입니다. 
+framer-motion은 리액트를 위한 웹 애니메이션, 제스처 오픈소스 라이브러리입니다.
 
 아래와 같은 기능을 제공하고 있습니다.
 
@@ -19,7 +19,7 @@ framer-motion은 리액트를 위한 웹 애니메이션, 제스처 오픈소스
 
 ## 1.1. 리액트 애니메이션 라이브러리 비교
 
-* https://openbase.com/categories/js/best-react-animation-libraries?orderBy=RECOMMENDED&
+- https://openbase.com/categories/js/best-react-animation-libraries?orderBy=RECOMMENDED&
 
 ![chakra-framer](/assets/images/posts/chakra-framer.png)
 
@@ -30,21 +30,16 @@ yarn add framer-motion
 ```
 
 ```jsx
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
 
-export const MyComponent = () => (
-  <motion.div
-    animate={{ rotate: 360 }}
-    transition={{ duration: 2 }}
-  />
-)
+export const MyComponent = () => <motion.div animate={{ rotate: 360 }} transition={{ duration: 2 }} />;
 ```
 
 # 3. API 돌아보기
 
 ## 3.1. animation
 
-간단하게 애니메이션 설정값을 바로 사용할 수 있습니다. 
+간단하게 애니메이션 설정값을 바로 사용할 수 있습니다.
 
 ```jsx
 <motion.div animate={{ x: 0 }} />
@@ -55,20 +50,15 @@ export const MyComponent = () => (
 필요한 경우에 애니메이션 초기값을 지정합니다.
 
 ```jsx
-<motion.div 
-	initial={{ x: '-100vw' }}
-	animate={{ x: 0 }} />
+<motion.div initial={{ x: "-100vw" }} animate={{ x: 0 }} />
 ```
 
 ## 3.3. transition
 
-Motion은 애니메이션을 적용할 속성에 따라 적절한 트랜지션 기본값을 미리 제공합니다.  예를 들어, x 또는 scale과 같은 프로퍼티는 spring을 사용합니다. opacity나 color와 같은 프로퍼티는 tween을 사용합니다.
+Motion은 애니메이션을 적용할 속성에 따라 적절한 트랜지션 기본값을 미리 제공합니다. 예를 들어, x 또는 scale과 같은 프로퍼티는 spring을 사용합니다. opacity나 color와 같은 프로퍼티는 tween을 사용합니다.
 
 ```jsx
-<motion.div
-  animate={{ x: 100 }}
-  transition={{ ease: "easeOut", duration: 2 }}
-/>
+<motion.div animate={{ x: 100 }} transition={{ ease: "easeOut", duration: 2 }} />
 ```
 
 ### 3.3.1 Spring
@@ -76,10 +66,7 @@ Motion은 애니메이션을 적용할 속성에 따라 적절한 트랜지션 �
 [https://csb-b3yhc.netlify.app/](https://csb-b3yhc.netlify.app/)
 
 ```jsx
-<motion.div
-  animate={{ scale: 1.5 }}
-  transition={{ type: "spring", damping: 3 }}
-/>
+<motion.div animate={{ scale: 1.5 }} transition={{ type: "spring", damping: 3 }} />
 ```
 
 ### 3.3.2 Repeat and delay
@@ -87,10 +74,7 @@ Motion은 애니메이션을 적용할 속성에 따라 적절한 트랜지션 �
 [https://csb-gp4b9.netlify.app/](https://csb-gp4b9.netlify.app/)
 
 ```jsx
-<motion.div
-  animate={{ rotate: 360 }}
-  transition={{ ease: "linear", duration: 2, repeat: Infinity, delay: 1 }}
-/>
+<motion.div animate={{ rotate: 360 }} transition={{ ease: "linear", duration: 2, repeat: Infinity, delay: 1 }} />
 ```
 
 ### 3.3.3 Delay between repetitions
@@ -101,10 +85,10 @@ Motion은 애니메이션을 적용할 속성에 따라 적절한 트랜지션 �
 <motion.div
   animate={{ rotate: 360 }}
   transition={{
-      duration: 2,
-      repeat: Infinity,
-      delay: 1,
-      repeatDelay: 1,
+    duration: 2,
+    repeat: Infinity,
+    delay: 1,
+    repeatDelay: 1,
   }}
 />
 ```
@@ -115,14 +99,14 @@ Motion은 애니메이션을 적용할 속성에 따라 적절한 트랜지션 �
 
 ```jsx
 <motion.div
-	y={-90}
+  y={-90}
   animate={{ y: 70, rotate: 360 }}
   transition={{
-      delay: 1,
-      duration: 2,
-      ease: [0.075, 0.82, 0.165, 1],
-      repeat: Infinity,
-      repeatType: "reverse" // loop(default), mirror(Earlier, flip), reverse(Earlier, yoyo)
+    delay: 1,
+    duration: 2,
+    ease: [0.075, 0.82, 0.165, 1],
+    repeat: Infinity,
+    repeatType: "reverse", // loop(default), mirror(Earlier, flip), reverse(Earlier, yoyo)
   }}
 />
 ```
@@ -133,44 +117,13 @@ Motion은 애니메이션을 적용할 속성에 따라 적절한 트랜지션 �
 
 ```jsx
 <motion.div
-	initial={{ x: -200 }}
+  initial={{ x: -200 }}
   animate={{ x: 200 }}
-	transition={{
-	    type: "spring",
-	    repeat: Infinity,
-	    repeatType: "mirror",
-	    repeatDelay: 0.1
-  }}
-/>
-```
-
-### 3.3.6 Transition settings per property
-
-[https://csb-1wlz1.netlify.app/](https://csb-1wlz1.netlify.app/)
-
-```jsx
-<motion.div
-	y={-90}
-  animate={{
-	    y: 70,
-	    rotate: 360,
-	    scale: 0.8,
-  }}
   transition={{
-      delay: 1,
-      duration: 2,
-      ease: [0.075, 0.82, 0.165, 1],
-      repeat: Infinity,
-      repeatType: "reverse",
-      rotate: {
-          duration: 2,
-          ease: "linear",
-          repeat: Infinity,
-      },
-      scale: {
-          type: "spring",
-          damping: 3,
-      },
+    type: "spring",
+    repeat: Infinity,
+    repeatType: "mirror",
+    repeatDelay: 0.1,
   }}
 />
 ```
@@ -195,11 +148,11 @@ Motion은 애니메이션을 적용할 속성에 따라 적절한 트랜지션 �
 
 `tap`이 성공적으로 완료되면 `tap` 이벤트가 발생하고 `tap`이 컴포넌트 외부에서 종료되면 `tapCancel` 이벤트가 발생합니다.
 
-만약에 `tap`이 가능한 컴포넌트가 draggable 컴포넌트의 자식이라면, 3px 이상 포인터가 이동할 때 `tap` 제스처가 자동으로 취소됩니다. 
+만약에 `tap`이 가능한 컴포넌트가 draggable 컴포넌트의 자식이라면, 3px 이상 포인터가 이동할 때 `tap` 제스처가 자동으로 취소됩니다.
 
 ```jsx
 function onTap(event, info) {
-  console.log(info.point.x, info.point.y)
+  console.log(info.point.x, info.point.y);
 }
 
 <motion.a
@@ -207,7 +160,7 @@ function onTap(event, info) {
   onTap={onTap}
   onTapStart={(event, info) => {}}
   onTapCancel={(event, info) => {}}
-/>
+/>;
 ```
 
 ### 3.4.3. pan
@@ -216,28 +169,24 @@ function onTap(event, info) {
 
 ```jsx
 function onPan(event, info) {
-  console.log(info.point.x, info.point.y)
+  console.log(info.point.x, info.point.y);
 }
 
-<motion.a
-  onPan={onPan}
-  onPanStart={(event, info) => {}}
-  onPanEnd={(event, info) => {}}
-/>
+<motion.a onPan={onPan} onPanStart={(event, info) => {}} onPanEnd={(event, info) => {}} />;
 ```
 
 ### 3.4.3. Drag
 
-`drag` 제스처는 `pan` 제스처의 규칙을 따르지만 컴포넌트의 x/y 축에 포인터 이동을 적용합니다. 
+`drag` 제스처는 `pan` 제스처의 규칙을 따르지만 컴포넌트의 x/y 축에 포인터 이동을 적용합니다.
 
 ```jsx
 <motion.div drag />
 
-// draggable 컴포넌트가 layout 애니메이션에도 사용되는 경우 
+// draggable 컴포넌트가 layout 애니메이션에도 사용되는 경우
 // drag 제스처가 x/y 변형 대신 컴포넌트 뷰포트 박스에 적용됩니다.
 <motion.div drag layout />
 
-// drag: 이동한 축을 설정합니다. 
+// drag: 이동한 축을 설정합니다.
 <motion.div drag="x" /> //false(default), ture(both), x, y
 
 // dragConstraints: 이동 가능한 픽셀을 제한합니다.
@@ -271,7 +220,7 @@ const MyComponent = () => {
   dragMomentum={false} // treu(default), false
 />
 
-// dragTransition: 드래그 관성을 변경할 수 있습니다. 
+// dragTransition: 드래그 관성을 변경할 수 있습니다.
 <motion.div
   drag
   dragTransition={{ bounceStiffness: 600, bounceDamping: 10 }}
@@ -340,12 +289,12 @@ return (
 [https://codesandbox.io/embed/framer-motion-2-animating-shared-layouts-1cpd0?fontsize=14&hidenavigation=1&theme=dark](https://codesandbox.io/embed/framer-motion-2-animating-shared-layouts-1cpd0?fontsize=14&hidenavigation=1&theme=dark)
 
 ```jsx
-import { AnimateSharedLayout } from "framer-motion"
+import { AnimateSharedLayout } from "framer-motion";
 
 function Item({ content }) {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
 
-  return <motion.div layout>{isOpen && content}</motion.div>
+  return <motion.div layout>{isOpen && content}</motion.div>;
 }
 
 function List({ items }) {
@@ -356,23 +305,23 @@ function List({ items }) {
    */
   return (
     <motion.ul layout>
-      {items.map(item => (
+      {items.map((item) => (
         <Item content={item.content} />
       ))}
     </motion.ul>
-  )
+  );
 }
 
 function List({ items, selectedId }) {
   return (
     <AnimateSharedLayout>
       <motion.ul layout>
-        {items.map(item => (
+        {items.map((item) => (
           <Item content={item.content} />
         ))}
       </motion.ul>
     </AnimateSharedLayout>
-  )
+  );
 }
 ```
 
@@ -390,13 +339,8 @@ export default function App() {
   return (
     <AnimateSharedLayout>
       <ul>
-        {colors.map(color => (
-          <Item
-            key={color}
-            color={color}
-            isSelected={selected === color}
-            onClick={() => setSelected(color)}
-          />
+        {colors.map((color) => (
+          <Item key={color} color={color} isSelected={selected === color} onClick={() => setSelected(color)} />
         ))}
       </ul>
     </AnimateSharedLayout>
@@ -406,15 +350,7 @@ export default function App() {
 function Item({ color, isSelected, onClick }) {
   return (
     <li className="item" onClick={onClick} style={{ backgroundColor: color }}>
-      {isSelected && (
-        <motion.div
-          layoutId="outline"
-          className="outline"
-          initial={false}
-          animate={{ borderColor: color }}
-          transition={spring}
-        />
-      )}
+      {isSelected && <motion.div layoutId="outline" className="outline" initial={false} animate={{ borderColor: color }} transition={spring} />}
     </li>
   );
 }
@@ -424,7 +360,7 @@ const colors = ["#ff0055", "#0099ff", "#22cc88", "#ffaa00"];
 const spring = {
   type: "spring",
   stiffness: 500,
-  damping: 30
+  damping: 30,
 };
 ```
 
@@ -433,49 +369,32 @@ const spring = {
 `AnimatePresence` 컴포넌트는 React 트리에서 컴포넌트가 제거될 때의 애니메이션을 처리합니다. 컴포넌트가 언마운트될 때를 알리고, 애니메이션이 끝날때까지 컴포넌트의 언마운트 시점을 미룰 수 있습니다.
 
 ```jsx
-import { motion, AnimatePresence } from "framer-motion"
+import { motion, AnimatePresence } from "framer-motion";
 
-export const MyComponent = ({ isVisible }) => (
-  <AnimatePresence>
-    {isVisible && (
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-      />
-    )}
-  </AnimatePresence>
-)
+export const MyComponent = ({ isVisible }) => <AnimatePresence>{isVisible && <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} />}</AnimatePresence>;
 ```
 
 # 5. framer-motion with Chakra-ui
 
 ```jsx
-import React from 'react';
-import { forwardRef, ChakraProps, chakra } from '@chakra-ui/react';
-import { motion, MotionProps, isValidMotionProp } from 'framer-motion';
+import React from "react";
+import { forwardRef, ChakraProps, chakra } from "@chakra-ui/react";
+import { motion, MotionProps, isValidMotionProp } from "framer-motion";
 
 // 1. Create a custom motion component from Box
 const MotionBox = motion.custom(
-	forwardRef<MotionProps & ChakraProps, 'div'>((props, ref) => {
-		const chakraProps = Object.fromEntries(Object.entries(props).filter(([key]) => !isValidMotionProp(key)));
+  (forwardRef < MotionProps) & ChakraProps,
+  "div" >
+    ((props, ref) => {
+      const chakraProps = Object.fromEntries(Object.entries(props).filter(([key]) => !isValidMotionProp(key)));
 
-		return <chakra.div ref={ref} {...chakraProps} />;
-	})
+      return <chakra.div ref={ref} {...chakraProps} />;
+    })
 );
 
 // 2. You'll get access to `motion` and `chakra` props in `MotionBox`
-function Example(){
-  return (
-       <MotionBox
-          size="40px"
-          bg="red.300"
-          drag="x"
-          dragConstraints={{ left: -100, right: 100 }}
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-        />
-  )
+function Example() {
+  return <MotionBox size="40px" bg="red.300" drag="x" dragConstraints={{ left: -100, right: 100 }} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} />;
 }
 ```
 
@@ -484,6 +403,6 @@ function Example(){
 - 공식홈페이지: [https://www.framer.com/motion/](https://www.framer.com/motion/)
 - API: [https://www.framer.com/api/motion](https://www.framer.com/api/motion)
 - 프레이머북: [https://framerbook.com/x/framer-motion/](https://framerbook.com/x/framer-motion/)
-- The Net Ninja Framer Motion Tutorial  Youtube: [https://www.youtube.com/watch?v=2V1WK-3HQNk&list=PL4cUxeGkcC9iHDnQfTHEVVceOEBsOf07i](https://www.youtube.com/watch?v=2V1WK-3HQNk&list=PL4cUxeGkcC9iHDnQfTHEVVceOEBsOf07i)
+- The Net Ninja Framer Motion Tutorial Youtube: [https://www.youtube.com/watch?v=2V1WK-3HQNk&list=PL4cUxeGkcC9iHDnQfTHEVVceOEBsOf07i](https://www.youtube.com/watch?v=2V1WK-3HQNk&list=PL4cUxeGkcC9iHDnQfTHEVVceOEBsOf07i)
 - The Net Ninja Framer Motion Tutorial github: [https://github.com/iamshaunjp/framer-motion](https://github.com/iamshaunjp/framer-motion)
 - Animating Routes With Reach/Router: [https://codesandbox.io/embed/react-pose-route-transitions-with-reach-router-76mf0](https://codesandbox.io/embed/react-pose-route-transitions-with-reach-router-76mf0)

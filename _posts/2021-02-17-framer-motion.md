@@ -4,11 +4,7 @@ date: 2021-02-17 09:32:00 -0400
 categories: react
 ---
 
-# 1. 어떤 일을 할 수 있나요?
-
-framer-motion은 리액트를 위한 웹 애니메이션, 제스처 오픈소스 라이브러리입니다.
-
-아래와 같은 기능을 제공하고 있습니다.
+framer-motion은 리액트를 위한 웹 애니메이션, 제스처 오픈소스 라이브러리입니다. 아래와 같은 기능을 제공하고 있습니다.
 
 - 다양한 애니메이션
 - 단순한 키프레임 문법 제공
@@ -21,13 +17,7 @@ framer-motion은 리액트를 위한 웹 애니메이션, 제스처 오픈소스
 - CSS 변수
 - ..그외 훨씬 더 많은 것들
 
-## 1.1. 리액트 애니메이션 라이브러리 비교
-
-- https://openbase.com/categories/js/best-react-animation-libraries?orderBy=RECOMMENDED&
-
-![chakra-framer](/assets/images/posts/chakra-framer.png)
-
-# 2. 시작하기
+# 시작하기
 
 ```bash
 yarn add framer-motion
@@ -39,9 +29,9 @@ import { motion } from "framer-motion";
 export const MyComponent = () => <motion.div animate={{ rotate: 360 }} transition={{ duration: 2 }} />;
 ```
 
-# 3. API 돌아보기
+# API 돌아보기
 
-## 3.1. animation
+## 1. animation
 
 간단하게 애니메이션 설정값을 바로 사용할 수 있습니다.
 
@@ -49,7 +39,7 @@ export const MyComponent = () => <motion.div animate={{ rotate: 360 }} transitio
 <motion.div animate={{ x: 0 }} />
 ```
 
-## 3.2. initial
+## 2. initial
 
 필요한 경우에 애니메이션 초기값을 지정합니다.
 
@@ -57,7 +47,7 @@ export const MyComponent = () => <motion.div animate={{ rotate: 360 }} transitio
 <motion.div initial={{ x: "-100vw" }} animate={{ x: 0 }} />
 ```
 
-## 3.3. transition
+## 3. transition
 
 Motion은 애니메이션을 적용할 속성에 따라 적절한 트랜지션 기본값을 미리 제공합니다. 예를 들어, x 또는 scale과 같은 프로퍼티는 spring을 사용합니다. opacity나 color와 같은 프로퍼티는 tween을 사용합니다.
 
@@ -65,7 +55,7 @@ Motion은 애니메이션을 적용할 속성에 따라 적절한 트랜지션 �
 <motion.div animate={{ x: 100 }} transition={{ ease: "easeOut", duration: 2 }} />
 ```
 
-### 3.3.1 Spring
+### 3.1 Spring
 
 [https://csb-b3yhc.netlify.app/](https://csb-b3yhc.netlify.app/)
 
@@ -73,7 +63,7 @@ Motion은 애니메이션을 적용할 속성에 따라 적절한 트랜지션 �
 <motion.div animate={{ scale: 1.5 }} transition={{ type: "spring", damping: 3 }} />
 ```
 
-### 3.3.2 Repeat and delay
+### 3.2 Repeat and delay
 
 [https://csb-gp4b9.netlify.app/](https://csb-gp4b9.netlify.app/)
 
@@ -81,7 +71,7 @@ Motion은 애니메이션을 적용할 속성에 따라 적절한 트랜지션 �
 <motion.div animate={{ rotate: 360 }} transition={{ ease: "linear", duration: 2, repeat: Infinity, delay: 1 }} />
 ```
 
-### 3.3.3 Delay between repetitions
+### 3.3 Delay between repetitions
 
 [https://csb-7zw1d.netlify.app/](https://csb-7zw1d.netlify.app/)
 
@@ -97,7 +87,7 @@ Motion은 애니메이션을 적용할 속성에 따라 적절한 트랜지션 �
 />
 ```
 
-### 3.3.4 Repeat type and Bézier curves
+### 3.4 Repeat type and Bézier curves
 
 [https://csb-tz3ht.netlify.app/](https://csb-tz3ht.netlify.app/)
 
@@ -115,7 +105,7 @@ Motion은 애니메이션을 적용할 속성에 따라 적절한 트랜지션 �
 />
 ```
 
-### 3.3.5 Repeating spring animations
+### 3.5 Repeating spring animations
 
 [https://csb-vedl9.netlify.app/](https://csb-vedl9.netlify.app/)
 
@@ -132,9 +122,9 @@ Motion은 애니메이션을 적용할 속성에 따라 적절한 트랜지션 �
 />
 ```
 
-## 3.4. Gestures
+## 4. Gestures
 
-### 3.4.1. hover
+### 4.1. hover
 
 `hover` 제스처는 `onMouseEnter`과 `onMouseLeave`와 다릅니다. `hover`는 실제 마우스 기기 동작에 의해서만 발생하는 것을 보장합니다. (브라우저의 마우스 이벤트가 터치 입력에서도 마우스 동작으로 간주되는 것과 상반됩니다.)
 
@@ -146,7 +136,7 @@ Motion은 애니메이션을 적용할 속성에 따라 적절한 트랜지션 �
 />
 ```
 
-### 3.4.2. tap
+### 4.2. tap
 
 `tap` 제스처는 포인터가 동일한 컴포넌트를 눌렀다가 놓았을 때 감지합니다.
 
@@ -167,7 +157,7 @@ function onTap(event, info) {
 />;
 ```
 
-### 3.4.3. pan
+### 4.3. pan
 
 `pan` 제스처는 포인터가 구성 요소를 누르고 3픽셀 이상 이동할 때 인식합니다. `pan` 제스처는 포인터가 해제되면 종료됩니다.
 
@@ -179,7 +169,7 @@ function onPan(event, info) {
 <motion.a onPan={onPan} onPanStart={(event, info) => {}} onPanEnd={(event, info) => {}} />;
 ```
 
-### 3.4.3. Drag
+### 4.3. Drag
 
 `drag` 제스처는 `pan` 제스처의 규칙을 따르지만 컴포넌트의 x/y 축에 포인터 이동을 적용합니다.
 
@@ -271,9 +261,9 @@ return (
 />
 ```
 
-# 4. 컴포넌트
+# 컴포넌트
 
-## 4.1. motion
+## 1. motion
 
 `motion` 컴포넌트는 60fps 애니메이션과 제스처에 최적화된 DOM 기본요소입니다. 모든 HTML, SVG 엘리먼트에 `motion.`을 붙이면 motion 컴포넌트가 됩니다. (e.g. `motion.div,` `motion.circle` )
 
@@ -284,11 +274,11 @@ return (
 - 제스처에 대한 애니메이션 응답
 - 리액트 트리에 대해 variants를 통한 깊은 애니메이션 제공
 
-## 4.2. AnimateSharedLayout
+## 2. AnimateSharedLayout
 
 `AnimateSharedLayout` 컴포넌트를 사용하여 레이아웃 애니메이션을 수행할 수 있습니다.
 
-### 4.2.1. 상태를 공유하지 않는 컴포넌트 그룹 애니메이션
+### 2.1. 상태를 공유하지 않는 컴포넌트 그룹 애니메이션
 
 [https://codesandbox.io/embed/framer-motion-2-animating-shared-layouts-1cpd0?fontsize=14&hidenavigation=1&theme=dark](https://codesandbox.io/embed/framer-motion-2-animating-shared-layouts-1cpd0?fontsize=14&hidenavigation=1&theme=dark)
 
@@ -329,7 +319,7 @@ function List({ items, selectedId }) {
 }
 ```
 
-### 4.2.2 layoutId를 공유하는 서로 다른 컴포넌트 애니메이션
+### 2.2 layoutId를 공유하는 서로 다른 컴포넌트 애니메이션
 
 [https://codesandbox.io/embed/framer-motion-2-animatesharedlayout-animate-between-different-components-dy0bv?fontsize=14&hidenavigation=1&theme=dark](https://codesandbox.io/embed/framer-motion-2-animatesharedlayout-animate-between-different-components-dy0bv?fontsize=14&hidenavigation=1&theme=dark)
 
@@ -368,7 +358,7 @@ const spring = {
 };
 ```
 
-## 4.3. AnimatePresence
+## 3. AnimatePresence
 
 `AnimatePresence` 컴포넌트는 React 트리에서 컴포넌트가 제거될 때의 애니메이션을 처리합니다. 컴포넌트가 언마운트될 때를 알리고, 애니메이션이 끝날때까지 컴포넌트의 언마운트 시점을 미룰 수 있습니다.
 

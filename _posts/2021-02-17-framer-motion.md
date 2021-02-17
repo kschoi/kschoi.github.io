@@ -1,4 +1,8 @@
-# framer-motion 빠르게 살펴보기
+---
+title: "framer-motion 사용법 빠르게 살펴보기"
+date: 2021-02-17 09:32:00 -0400
+categories: react
+---
 
 # 1. 어떤 일을 할 수 있나요?
 

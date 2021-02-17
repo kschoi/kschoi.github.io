@@ -410,3 +410,19 @@ function Example() {
 - The Net Ninja Framer Motion Tutorial Youtube: [https://www.youtube.com/watch?v=2V1WK-3HQNk&list=PL4cUxeGkcC9iHDnQfTHEVVceOEBsOf07i](https://www.youtube.com/watch?v=2V1WK-3HQNk&list=PL4cUxeGkcC9iHDnQfTHEVVceOEBsOf07i)
 - The Net Ninja Framer Motion Tutorial github: [https://github.com/iamshaunjp/framer-motion](https://github.com/iamshaunjp/framer-motion)
 - Animating Routes With Reach/Router: [https://codesandbox.io/embed/react-pose-route-transitions-with-reach-router-76mf0](https://codesandbox.io/embed/react-pose-route-transitions-with-reach-router-76mf0)
+
+<style type="text/css">
+@media (min-width: 64em) {
+  .archive pre { font-size: 0.8em; }
+	.archive li,
+	.archive p {
+		font-size: 0.84em;
+	}
+}
+@media (min-width: 80em) {
+	.archive li,
+	.archive p {
+		font-size: 0.72em;
+	}
+}
+</style>
